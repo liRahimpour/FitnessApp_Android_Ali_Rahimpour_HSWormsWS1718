@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.alirahimpour.fitness_app.MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/schrittFoto"
+            android:layout_width="52dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="90dp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/schritte"
+            app:layout_constraintBottom_toTopOf="@+id/CalFoto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside"
+            />
+
+        <ImageView
+            android:id="@+id/CalFoto"
+            android:layout_width="32dp"
+            android:layout_height="33dp"
+            android:layout_marginBottom="339dp"
+            android:layout_marginEnd="118dp"
+            android:src="@drawable/cal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/MeterFoto"
+            app:layout_constraintTop_toBottomOf="@+id/schrittFoto" />
+
+        <ImageView
+            android:id="@+id/MeterFoto"
+            android:layout_width="29dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginStart="118dp"
+            android:src="@drawable/meter"
+            app:layout_constraintBottom_toBottomOf="@+id/CalFoto"
+            app:layout_constraintEnd_toStartOf="@+id/CalFoto"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/CalFoto" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/stepDisplay"
+        android:layout_width="209dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="96dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/textColorPrimaryInverseDisableOnly"
+        android:gravity="center"
+        android:text="0"
+        android:textEditNoPasteWindowLayout="@android:color/holo_blue_bright"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText"
+        tools:layout_constraintTop_creator="1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="213dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="202dp"
+        android:background="?android:attr/colorBackgroundFloating"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stepDisplay"
+
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/meterDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/_0000_m"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/kalDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/_0000_kal"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="265dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="34dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        >
+
+        <Button
+            android:id="@+id/resetBtn"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.25"
+            android:onClick="reset"
+            android:text="@string/reset"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_editor_absoluteY="174dp" />
+
+        <Button
+            android:id="@+id/startStopBtn"
+            style="@android:style/Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="0dp"
+            android:onClick="startStop"
+            android:text="@string/start" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
