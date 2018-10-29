@@ -1,14 +1,12 @@
+               		  				       
+		   www.AliRahimpour.com			       
+	 Entwicklung Mobieler Anwendungen WS17/18     	       
+      							       
 
-************************************************************************
-*                    		  				       *
-*			   www.AliRahimpour.com			       *
-*		 Entwicklung Mobieler Anwendungen WS17/18     	       *
-*        							       *
-************************************************************************
 
-# Wenn Sie das Projekt-Layout nicht sehen können, Synchronisieren Sie 
+## Wenn Sie das Projekt-Layout nicht sehen kÃ¶nnen, Synchronisieren Sie 
   bitte das Projekt mit "Gradle-File" 
 
-# Um Das fertige APP-Layout zu sehen, wählen Sie bitte "activity_main"-
+## Um Das fertige APP-Layout zu sehen, wÃ¤hlen Sie bitte "activity_main"-
   Datei aus dem Verzeichnis:
   app -> src -> main -> res -> layout-v24 
